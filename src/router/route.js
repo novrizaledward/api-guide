@@ -7,3 +7,4 @@ router.post("/content", upload.single("image"), CreateContent);
 router.get("/content", ReadContent);
 
 module.exports = router;
+ 

@@ -1,8 +1,6 @@
 const ContentModel = require("../models/content");
 
 const CreateContent = async (req, res) => {
-  console.log(req.file.path);
-  console.log(req.body.title);
   try {
     const DataRequest = ContentModel({
       title: req.body.title,
