@@ -1,11 +1,13 @@
 const express = require("express");
 const app = express();
+const path = require('path');
 const dbConfig = require("./src/config/database");
 const router = require("./src/router/route");
 
 dbConfig();
 require("dotenv").config();
 
+app.use('/images',express.static(path.join(__dirname, 'images')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/", router);

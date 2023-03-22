@@ -22,7 +22,6 @@ var upload = multer({
     ) {
       callback(null, true);
     } else {
-      console.log("error");
       callback(null, false);
     }
   },
